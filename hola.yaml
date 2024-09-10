@@ -1,0 +1,42 @@
+openapi: 3.0.0
+info:
+    title: hola
+    version: 1.0.0
+    description: 'Hola is a storage provider provides up to 100GB.'
+paths:
+    /registerUsers:
+        post:
+            summary: 'Register the users to utilize the features'
+    /retrieveUsers:
+        get:
+            summary: 'Retrieve the registered users'
+    '/retrieveUsers/{id}':
+        get:
+            summary: 'Retrieve the registered user using the id'
+    /createRoles:
+        post:
+            summary: 'create roles to access the pages, only access to admin'
+    /retrieveRoles:
+        get:
+            summary: 'retieve all created roles only admin can access'
+    /createRolesToUsers:
+        post:
+            summary: 'pass the roles and users details to assign roles to users, only admin can access'
+    '/retrieveRolesOfUsers/{id}':
+        get:
+            summary: 'retrieve the roles assigned to users, only admin can access the page'
+components:
+    schemas:
+        Users:
+            type: object
+            properties: {userId: {type: integer}, username: {type: string}, email: {type: string}, password: {type: string}}
+        Roles:
+            type: object
+            properties: {roleId: {type: integer}, rolename: {type: string}}
+    parameters:
+        id:
+            name: id
+            in: path
+            required: true
+            schema: {type: integer}
+    responses: {}
