@@ -7,24 +7,38 @@ paths:
     /registerUsers:
         post:
             summary: 'Register the users to utilize the features'
+            description: 'Register the users to utilize the features'
+            operationId: registerUsers
     /retrieveUsers:
         get:
             summary: 'Retrieve the registered users'
+            description: 'Retrieve the registered users'
+            operationId: retrieveUsers
     '/retrieveUsers/{id}':
         get:
             summary: 'Retrieve the registered user using the id'
+            description: 'Retrieve the registered user using the id'
+            operationId: retrieveUsersUsingId
     /createRoles:
         post:
             summary: 'create roles to access the pages, only access to admin'
+            description: 'create roles to access the pages, only access to admin'
+            operationId: createRoles
     /retrieveRoles:
         get:
             summary: 'retieve all created roles only admin can access'
+            description: 'retieve all created roles only admin can access'
+            operationId: retrieveRoles
     /createRolesToUsers:
         post:
             summary: 'pass the roles and users details to assign roles to users, only admin can access'
+            description: 'pass the roles and users details to assign roles to users, only admin can access'
+            operationId: createRolesToUsers
     '/retrieveRolesOfUsers/{id}':
         get:
             summary: 'retrieve the roles assigned to users, only admin can access the page'
+            description: 'retrieve the roles assigned to users, only admin can access the page'
+            operationId: retrieveRolesOfUsers
 components:
     schemas:
         Users:
