@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: awsFileUpload
+  title: AwsUpload
   version: 1.0.0
 paths:
   /upload:
