@@ -33,3 +33,19 @@ paths:
           description: Forbidden
         '500':
           description: Internal Server Error
+/getCustomers:
+    get:
+      summary: Finds Customers
+      description: Multiple status values can be provided with comma separated strings
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/xml:
+              schema:
+                type: array
+            application/json:
+              schema:
+                type: array
+        '400':
+          description: Invalid status value
