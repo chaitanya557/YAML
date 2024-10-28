@@ -33,4 +33,3 @@
             description: "Forbidden"
           "500":
             description: "Internal Server Error"
-applicationName: "employeeapp"
